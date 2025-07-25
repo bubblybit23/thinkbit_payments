@@ -30,6 +30,7 @@ This project provides:
 - PostgreSQL 17+
 - pgAdmin4
 - Google Chrome (for UI tests)
+```
 
 ### Setup Instructions
 
@@ -158,7 +159,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 **QA Solutions** • Quality Assurance Project • Philippines
-```
+
 
 ## Key Features Highlighted
 1. **Philippine Context**:
@@ -187,3 +188,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    - Success rate monitoring
 
 The README provides comprehensive setup instructions while highlighting the Philippine-specific aspects of the project. The virtual environment setup is clearly documented, and all security considerations (.env usage) are properly addressed.
+```
