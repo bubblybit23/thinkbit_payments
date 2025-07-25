@@ -1,6 +1,3 @@
-### **ThinkBIT Payments QA Suite - README.md**
-
-
 # ThinkBIT Payments QA Suite
 
 ![Philippine Payment Gateway](./payment_interface.png)
