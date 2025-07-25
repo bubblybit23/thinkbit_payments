@@ -1,6 +1,6 @@
 ### **ThinkBIT Payments QA Suite - README.md**
 
-```markdown
+
 # ThinkBIT Payments QA Suite
 
 ![Philippine Payment Gateway](./payment_interface.png)
@@ -30,7 +30,7 @@ This project provides:
 - PostgreSQL 17+
 - pgAdmin4
 - Google Chrome (for UI tests)
-```
+
 
 ### Setup Instructions
 
