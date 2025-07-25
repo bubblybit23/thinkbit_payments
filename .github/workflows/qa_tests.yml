@@ -1,0 +1,41 @@
+name: PH Payment QA
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      FLASK_SECRET: ${{ secrets.FLASK_SECRET }}
+      DB_USER: ${{ secrets.DB_USER }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: ${{ secrets.DB_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          POSTGRES_DB: ${{ secrets.DB_NAME }}
+          TZ: Asia/Manila
+        ports: ["5432:5432"]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with: { python-version: "3.10" }
+      
+    - name: Create Virtual Environment
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+        
+    - name: Setup Database
+      run: psql ${{ secrets.DB_URI }} < db_setup.sql
+      
+    - name: Run Tests
+      run: |
+        source venv/bin/activate
+        pytest --html=ph_report.html

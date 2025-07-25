@@ -1,0 +1,23 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Byte-compiled / cached files
+__pycache__/
+*.pyc
+
+# Log files
+*.log
+chromedriver.log
+
+# Test reports
+*.html
+
+# VS Code
+.vscode/
+
+
+# Windows
+Thumbs.db
